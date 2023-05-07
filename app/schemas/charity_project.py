@@ -1,6 +1,5 @@
 from datetime import datetime
 from typing import Optional
-from dateutil import parser
 
 from pydantic import BaseModel, Extra, Field, PositiveInt
 
@@ -33,6 +32,7 @@ class CharityProjectDB(CharityProjectCreate):
 
     class Config:
         orm_mode = True
+"""
         json_encoders = {
             datetime: lambda dt: dt.isoformat(),
         }
@@ -40,12 +40,12 @@ class CharityProjectDB(CharityProjectCreate):
     @classmethod
     def from_orm(cls, obj):
         model = super().from_orm(obj)
-        if obj.create_date:
-            model.create_date = parser.parse(obj.create_date)
-        if obj.close_date:
-            model.close_date = parser.parse(obj.close_date)
+        if isinstance(obj.create_date, datetime):
+            model.create_date = obj.create_date.isoformat()
+        if isinstance(obj.close_date, datetime):
+            model.close_date = obj.close_date.isoformat()
         return model
-
+"""
 
 class CharityProjectUpdate(CharityProjectBase):
     pass
