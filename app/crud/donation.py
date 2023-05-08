@@ -10,13 +10,13 @@ from app.models import Donation, User
 class CRUDDonation(CRUDBase):
 
     async def get_by_user(self, user: User, session: AsyncSession) -> List[Donation]:
-        async with session() as db:
-            donations = await db.execute(
-                select(Donation)
-                .where(Donation.user_id == user.id)
-                .order_by(Donation.create_date.desc())
-            )
-            return donations.scalars()
+
+        donations = await session.execute(
+            select(Donation)
+            .where(Donation.user_id == user.id)
+            .order_by(Donation.create_date.desc())
+        )
+        return donations.scalars().all()
 
 
 donation_crud = CRUDDonation(Donation)

@@ -10,7 +10,8 @@ class DonationBase(BaseModel):
 
 
 class DonationCreate(DonationBase):
-    pass
+    class Config:
+        orm_mode = True
 
 
 class DonationDB(DonationCreate):
@@ -20,6 +21,3 @@ class DonationDB(DonationCreate):
     invested_amount: int = Field(0)
     fully_invested: bool
     close_date: Optional[datetime]
-
-    class Config:
-        orm_mode = True
