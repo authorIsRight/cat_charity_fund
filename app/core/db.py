@@ -1,4 +1,3 @@
-# Добавляем импорт классов для определения столбца ID.
 from app.core.config import settings
 from sqlalchemy import Column, Integer
 from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine
@@ -15,7 +14,6 @@ class PreBase:
 
 Base = declarative_base(cls=PreBase)
 
-#engine = create_async_engine(settings.database_url)
 engine = create_async_engine(settings.database_url, pool_pre_ping=True)
 
 AsyncSessionLocal = sessionmaker(engine, class_=AsyncSession)

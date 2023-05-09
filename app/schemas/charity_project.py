@@ -32,9 +32,6 @@ class CharityProjectDB(CharityProjectCreate):
 
     class Config:
         orm_mode = True
-
-
-"""
         json_encoders = {
             datetime: lambda dt: dt.isoformat(),
         }
@@ -47,7 +44,6 @@ class CharityProjectDB(CharityProjectCreate):
         if isinstance(obj.close_date, datetime):
             model.close_date = obj.close_date.isoformat()
         return model
-"""
 
 
 class CharityProjectUpdate(CharityProjectBase):

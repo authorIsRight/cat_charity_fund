@@ -1,4 +1,3 @@
-# app/crud/base.py
 from typing import Optional
 
 from app.models import User

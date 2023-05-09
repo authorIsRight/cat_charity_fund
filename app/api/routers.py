@@ -1,5 +1,3 @@
-# app/api/routers.py
-# Две длинных строчки импортов заменяем на одну короткую.
 from app.api.endpoints import (charity_project_router, donation_router,
                                user_router)
 from fastapi import APIRouter
