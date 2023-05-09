@@ -16,7 +16,8 @@ class PreBase:
 
 Base = declarative_base(cls=PreBase)
 
-engine = create_async_engine(settings.database_url)
+#engine = create_async_engine(settings.database_url)
+engine = create_async_engine(settings.database_url, pool_pre_ping=True)
 
 AsyncSessionLocal = sessionmaker(engine, class_=AsyncSession) 
 

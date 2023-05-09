@@ -13,27 +13,25 @@ class CRUDCharityProject(CRUDBase):
                                      project_name: str,
                                      session: AsyncSession,
                                      ) -> Optional[int]:
-        result = await session.execute(
+        db_project_id = await session.execute(
             select(CharityProject.id).where(
                 CharityProject.name == project_name
             )
         )
-        return self._get_first_result(result)
+        db_project_id = db_project_id.scalars().first()
+        return db_project_id
 
     async def get_charity_project_by_id(self,
-                                        session: AsyncSession,
                                         project_id: int,
+                                        session: AsyncSession,
                                         ) -> Optional[CharityProject]:
-        result = await session.execute(
+        db_project = await session.execute(
             select(CharityProject).where(
                 CharityProject.id == project_id
             )
         )
-        return self._get_first_result(result)
-
-    @staticmethod
-    def _get_first_result(result):
-        return result.scalars().first()
+        db_project = db_project.scalars().first()
+        return db_project
 
 
 charity_project_crud = CRUDCharityProject(CharityProject)

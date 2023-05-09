@@ -15,7 +15,7 @@ async def check_name_duplicate(
     if project_id is not None:
         raise HTTPException(
             status_code=HTTPStatus.BAD_REQUEST,
-            detail='Такой проект уже существует, измените имя',
+            detail='Проект с таким именем уже существует!',
         )
 
 
@@ -23,7 +23,7 @@ def check_charity_project_with_invested_sum(project: CharityProject, new_amount:
     if project.invested_amount > new_amount:
         raise HTTPException(
             status_code=HTTPStatus.BAD_REQUEST,
-            detail='Нельзя установить требуемую сумму меньше уже вложенной.'
+            detail='Нельзя установить сумму, ниже уже вложенной!'
         )
 
 
@@ -52,5 +52,5 @@ def check_charity_project_was_invested(charity_project: CharityProject):
     if charity_project.invested_amount > 0:
         raise HTTPException(
             status_code=HTTPStatus.BAD_REQUEST,
-            detail='Нельзя удалить проект, в который уже были инвестированы средства'
+            detail='В проект были внесены средства, не подлежит удалению!'
         )
