@@ -1,0 +1,1659 @@
+============================= test session starts =============================
+platform win32 -- Python 3.9.11, pytest-6.2.5, py-1.11.0, pluggy-1.0.0 -- D:\Dev\sp22\project\cat_charity_fund\venv\Scripts\python.exe
+rootdir: D:\Dev\sp22\project\cat_charity_fund, configfile: pytest.ini, testpaths: tests/
+plugins: anyio-3.6.1, Faker-12.0.1, asyncio-0.18.3, freezegun-0.4.2, pythonpath-0.7.4
+asyncio: mode=auto
+collecting ... collected 78 items
+
+tests/test_auth.py::test_register PASSED                                 [  1%]
+tests/test_auth.py::test_register_invalid_pass PASSED                    [  2%]
+tests/test_charity_project.py::test_create_invalid_project_name[] PASSED [  3%]
+tests/test_charity_project.py::test_create_invalid_project_name[lovechimichangasbutnunchakuisbetternunchakis4lifelovechimichangasbutnunchakuisbetternunchakis4lifelovechimichangasbutnunchakuisbetternunchakis4life] PASSED [  5%]
+tests/test_charity_project.py::test_create_invalid_project_name[None] PASSED [  6%]
+tests/test_charity_project.py::test_create_project_no_desc[] PASSED      [  7%]
+tests/test_charity_project.py::test_create_project_no_desc[None] PASSED  [  8%]
+tests/test_charity_project.py::test_create_project_with_autofilling_fields[json0] PASSED [ 10%]
+tests/test_charity_project.py::test_create_project_with_autofilling_fields[json1] PASSED [ 11%]
+tests/test_charity_project.py::test_create_project_with_autofilling_fields[json2] PASSED [ 12%]
+tests/test_charity_project.py::test_create_invalid_full_amount_value[-100] PASSED [ 14%]
+tests/test_charity_project.py::test_create_invalid_full_amount_value[0.5] PASSED [ 15%]
+tests/test_charity_project.py::test_create_invalid_full_amount_value[test] PASSED [ 16%]
+tests/test_charity_project.py::test_create_invalid_full_amount_value[0.0] PASSED [ 17%]
+tests/test_charity_project.py::test_create_invalid_full_amount_value[] PASSED [ 19%]
+tests/test_charity_project.py::test_create_invalid_full_amount_value[None] PASSED [ 20%]
+tests/test_charity_project.py::test_get_charity_project PASSED           [ 21%]
+tests/test_charity_project.py::test_get_all_charity_project PASSED       [ 23%]
+tests/test_charity_project.py::test_create_charity_project PASSED        [ 24%]
+tests/test_charity_project.py::test_create_charity_project_validation_error[json0] PASSED [ 25%]
+tests/test_charity_project.py::test_create_charity_project_validation_error[json1] PASSED [ 26%]
+tests/test_charity_project.py::test_create_charity_project_validation_error[json2] PASSED [ 28%]
+tests/test_charity_project.py::test_create_charity_project_validation_error[json3] PASSED [ 29%]
+tests/test_charity_project.py::test_create_charity_project_validation_error[json4] PASSED [ 30%]
+tests/test_charity_project.py::test_create_charity_project_validation_error[json5] PASSED [ 32%]
+tests/test_charity_project.py::test_delete_project_usual_user PASSED     [ 33%]
+tests/test_charity_project.py::test_delete_charity_project PASSED        [ 34%]
+tests/test_charity_project.py::test_delete_charity_project_invalid_id PASSED [ 35%]
+tests/test_charity_project.py::test_update_charity_project[json0-expected_data0] PASSED [ 37%]
+tests/test_charity_project.py::test_update_charity_project[json1-expected_data1] FAILED [ 38%]
+tests/test_charity_project.py::test_update_charity_project[json2-expected_data2] PASSED [ 39%]
+tests/test_charity_project.py::test_update_charity_project_full_amount_equal_invested_amount[json0] PASSED [ 41%]
+tests/test_charity_project.py::test_update_charity_project_full_amount_equal_invested_amount[json1] PASSED [ 42%]
+tests/test_charity_project.py::test_update_charity_project_invalid[json0] PASSED [ 43%]
+tests/test_charity_project.py::test_update_charity_project_invalid[json1] PASSED [ 44%]
+tests/test_charity_project.py::test_update_charity_project_invalid[json2] PASSED [ 46%]
+tests/test_charity_project.py::test_update_charity_with_unexpected_fields[json0] PASSED [ 47%]
+tests/test_charity_project.py::test_update_charity_with_unexpected_fields[json1] PASSED [ 48%]
+tests/test_charity_project.py::test_update_charity_with_unexpected_fields[json2] PASSED [ 50%]
+tests/test_charity_project.py::test_update_charity_with_unexpected_fields[json3] PASSED [ 51%]
+tests/test_charity_project.py::test_update_charity_project_same_name FAILED [ 52%]
+tests/test_charity_project.py::test_update_charity_project_full_amount_smaller_already_invested[0] PASSED [ 53%]
+tests/test_charity_project.py::test_update_charity_project_full_amount_smaller_already_invested[5] FAILED [ 55%]
+tests/test_charity_project.py::test_create_charity_project_usual_user PASSED [ 56%]
+tests/test_charity_project.py::test_patch_charity_project_usual_user PASSED [ 57%]
+tests/test_charity_project.py::test_patch_charity_project_fully_invested PASSED [ 58%]
+tests/test_charity_project.py::test_create_charity_project_same_name PASSED [ 60%]
+tests/test_charity_project.py::test_create_charity_project_diff_time PASSED [ 61%]
+tests/test_charity_project.py::test_donation_exist_project_create PASSED [ 62%]
+tests/test_charity_project.py::test_delete_charity_project_already_invested PASSED [ 64%]
+tests/test_charity_project.py::test_delete_charity_project_already_closed PASSED [ 65%]
+tests/test_charity_project.py::test_get_all_charity_project_not_auth_user PASSED [ 66%]
+tests/test_db.py::test_fin_base_is_abstract PASSED                       [ 67%]
+tests/test_db.py::test_check_migration_file_exist PASSED                 [ 69%]
+tests/test_db.py::test_check_db_url PASSED                               [ 70%]
+tests/test_donations.py::test_create_donation[json0-keys0-expected_data0] PASSED [ 71%]
+tests/test_donations.py::test_create_donation[json1-keys1-expected_data1] PASSED [ 73%]
+tests/test_donations.py::test_create_donation_incorrect[json0] PASSED    [ 74%]
+tests/test_donations.py::test_create_donation_incorrect[json1] PASSED    [ 75%]
+tests/test_donations.py::test_create_donation_incorrect[json2] PASSED    [ 76%]
+tests/test_donations.py::test_create_donation_incorrect[json3] PASSED    [ 78%]
+tests/test_donations.py::test_create_donation_incorrect[json4] PASSED    [ 79%]
+tests/test_donations.py::test_create_donation_incorrect[json5] PASSED    [ 80%]
+tests/test_donations.py::test_create_donation_incorrect[json6] PASSED    [ 82%]
+tests/test_donations.py::test_get_user_donation PASSED                   [ 83%]
+tests/test_donations.py::test_get_all_donations PASSED                   [ 84%]
+tests/test_donations.py::test_donation_invalid[json0] PASSED             [ 85%]
+tests/test_donations.py::test_donation_invalid[json1] PASSED             [ 87%]
+tests/test_donations.py::test_donation_invalid[json2] PASSED             [ 88%]
+tests/test_donations.py::test_donation_invalid[json3] PASSED             [ 89%]
+tests/test_donations.py::test_donation_superuser_UD_enpoints PASSED      [ 91%]
+tests/test_donations.py::test_donation_auth_user_UD_enpoints PASSED      [ 92%]
+tests/test_donations.py::test_donation_user_UD_enpoints PASSED           [ 93%]
+tests/test_donations.py::test_create_donation_check_create_date PASSED   [ 94%]
+tests/test_investment.py::test_donation_exist_non_project PASSED         [ 96%]
+tests/test_investment.py::test_project_exist_non_donations PASSED        [ 97%]
+tests/test_investment.py::test_fully_invested_amount_for_two_projects PASSED [ 98%]
+tests/test_investment.py::test_donation_to_little_invest_project PASSED  [100%]
+
+================================== FAILURES ===================================
+______________ test_update_charity_project[json1-expected_data1] ______________
+
+self = <sqlalchemy.future.engine.Connection object at 0x000001AC85FEBD60>
+dialect = <sqlalchemy.dialects.sqlite.aiosqlite.SQLiteDialect_aiosqlite object at 0x000001AC84D799A0>
+constructor = <bound method DefaultExecutionContext._init_compiled of <class 'sqlalchemy.dialects.sqlite.aiosqlite.SQLiteExecutionContext_aiosqlite'>>
+statement = 'SELECT charityproject.id \nFROM charityproject \nWHERE charityproject.name = ?'
+parameters = (CharityProjectUpdate(name='chimi', description=None, full_amount=None),)
+execution_options = immutabledict({'prebuffer_rows': True, '_result_disable_adapt_to_context': True, 'future_result': True})
+args = (<sqlalchemy.dialects.sqlite.base.SQLiteCompiler object at 0x000001AC86116310>, [{}], <sqlalchemy.sql.selectable.Selec...0495314256 name)s', CharityProjectUpdate(name='chimi', description=None, full_amount=None), type_=String(length=100))])
+kw = {'cache_hit': symbol('CACHE_HIT')}
+branched = <sqlalchemy.future.engine.Connection object at 0x000001AC85FEBD60>
+conn = <sqlalchemy.pool.base._ConnectionFairy object at 0x000001AC860F7EE0>
+context = <sqlalchemy.dialects.sqlite.aiosqlite.SQLiteExecutionContext_aiosqlite object at 0x000001AC8610F790>
+cursor = <sqlalchemy.dialects.sqlite.aiosqlite.AsyncAdapt_aiosqlite_cursor object at 0x000001AC86181A60>
+evt_handled = False
+
+    def _execute_context(
+        self,
+        dialect,
+        constructor,
+        statement,
+        parameters,
+        execution_options,
+        *args,
+        **kw
+    ):
+        """Create an :class:`.ExecutionContext` and execute, returning
+        a :class:`_engine.CursorResult`."""
+    
+        branched = self
+        if self.__branch_from:
+            # if this is a "branched" connection, do everything in terms
+            # of the "root" connection, *except* for .close(), which is
+            # the only feature that branching provides
+            self = self.__branch_from
+    
+        try:
+            conn = self._dbapi_connection
+            if conn is None:
+                conn = self._revalidate_connection()
+    
+            context = constructor(
+                dialect, self, conn, execution_options, *args, **kw
+            )
+        except (exc.PendingRollbackError, exc.ResourceClosedError):
+            raise
+        except BaseException as e:
+            self._handle_dbapi_exception(
+                e, util.text_type(statement), parameters, None, None
+            )
+    
+        if (
+            self._transaction
+            and not self._transaction.is_active
+            or (
+                self._nested_transaction
+                and not self._nested_transaction.is_active
+            )
+        ):
+            self._invalid_transaction()
+    
+        elif self._trans_context_manager:
+            TransactionalContext._trans_ctx_check(self)
+    
+        if self._is_future and self._transaction is None:
+            self._autobegin()
+    
+        context.pre_exec()
+    
+        if dialect.use_setinputsizes:
+            context._set_input_sizes()
+    
+        cursor, statement, parameters = (
+            context.cursor,
+            context.statement,
+            context.parameters,
+        )
+    
+        if not context.executemany:
+            parameters = parameters[0]
+    
+        if self._has_events or self.engine._has_events:
+            for fn in self.dispatch.before_cursor_execute:
+                statement, parameters = fn(
+                    self,
+                    cursor,
+                    statement,
+                    parameters,
+                    context,
+                    context.executemany,
+                )
+    
+        if self._echo:
+    
+            self._log_info(statement)
+    
+            stats = context._get_cache_stats()
+    
+            if not self.engine.hide_parameters:
+                self._log_info(
+                    "[%s] %r",
+                    stats,
+                    sql_util._repr_params(
+                        parameters, batches=10, ismulti=context.executemany
+                    ),
+                )
+            else:
+                self._log_info(
+                    "[%s] [SQL parameters hidden due to hide_parameters=True]"
+                    % (stats,)
+                )
+    
+        evt_handled = False
+        try:
+            if context.executemany:
+                if self.dialect._has_events:
+                    for fn in self.dialect.dispatch.do_executemany:
+                        if fn(cursor, statement, parameters, context):
+                            evt_handled = True
+                            break
+                if not evt_handled:
+                    self.dialect.do_executemany(
+                        cursor, statement, parameters, context
+                    )
+            elif not parameters and context.no_parameters:
+                if self.dialect._has_events:
+                    for fn in self.dialect.dispatch.do_execute_no_params:
+                        if fn(cursor, statement, context):
+                            evt_handled = True
+                            break
+                if not evt_handled:
+                    self.dialect.do_execute_no_params(
+                        cursor, statement, context
+                    )
+            else:
+                if self.dialect._has_events:
+                    for fn in self.dialect.dispatch.do_execute:
+                        if fn(cursor, statement, parameters, context):
+                            evt_handled = True
+                            break
+                if not evt_handled:
+>                   self.dialect.do_execute(
+                        cursor, statement, parameters, context
+                    )
+
+venv\lib\site-packages\sqlalchemy\engine\base.py:1819: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <sqlalchemy.dialects.sqlite.aiosqlite.SQLiteDialect_aiosqlite object at 0x000001AC84D799A0>
+cursor = <sqlalchemy.dialects.sqlite.aiosqlite.AsyncAdapt_aiosqlite_cursor object at 0x000001AC86181A60>
+statement = 'SELECT charityproject.id \nFROM charityproject \nWHERE charityproject.name = ?'
+parameters = (CharityProjectUpdate(name='chimi', description=None, full_amount=None),)
+context = <sqlalchemy.dialects.sqlite.aiosqlite.SQLiteExecutionContext_aiosqlite object at 0x000001AC8610F790>
+
+    def do_execute(self, cursor, statement, parameters, context=None):
+>       cursor.execute(statement, parameters)
+
+venv\lib\site-packages\sqlalchemy\engine\default.py:732: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <sqlalchemy.dialects.sqlite.aiosqlite.AsyncAdapt_aiosqlite_cursor object at 0x000001AC86181A60>
+operation = 'SELECT charityproject.id \nFROM charityproject \nWHERE charityproject.name = ?'
+parameters = (CharityProjectUpdate(name='chimi', description=None, full_amount=None),)
+
+    def execute(self, operation, parameters=None):
+        try:
+            _cursor = self.await_(self._connection.cursor())
+    
+            if parameters is None:
+                self.await_(_cursor.execute(operation))
+            else:
+                self.await_(_cursor.execute(operation, parameters))
+    
+            if _cursor.description:
+                self.description = _cursor.description
+                self.lastrowid = self.rowcount = -1
+    
+                if not self.server_side:
+                    self._rows = self.await_(_cursor.fetchall())
+            else:
+                self.description = None
+                self.lastrowid = _cursor.lastrowid
+                self.rowcount = _cursor.rowcount
+    
+            if not self.server_side:
+                self.await_(_cursor.close())
+            else:
+                self._cursor = _cursor
+        except Exception as error:
+>           self._adapt_connection._handle_exception(error)
+
+venv\lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py:100: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <AdaptedConnection <Connection(Thread-100, stopped daemon 26144)>>
+error = InterfaceError('Error binding parameter 0 - probably unsupported type.')
+
+    def _handle_exception(self, error):
+        if (
+            isinstance(error, ValueError)
+            and error.args[0] == "no active connection"
+        ):
+            util.raise_(
+                self.dbapi.sqlite.OperationalError("no active connection"),
+                from_=error,
+            )
+        else:
+>           raise error
+
+venv\lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py:229: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <sqlalchemy.dialects.sqlite.aiosqlite.AsyncAdapt_aiosqlite_cursor object at 0x000001AC86181A60>
+operation = 'SELECT charityproject.id \nFROM charityproject \nWHERE charityproject.name = ?'
+parameters = (CharityProjectUpdate(name='chimi', description=None, full_amount=None),)
+
+    def execute(self, operation, parameters=None):
+        try:
+            _cursor = self.await_(self._connection.cursor())
+    
+            if parameters is None:
+                self.await_(_cursor.execute(operation))
+            else:
+>               self.await_(_cursor.execute(operation, parameters))
+
+venv\lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py:82: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+awaitable = <coroutine object Cursor.execute at 0x000001AC86099740>
+
+    def await_only(awaitable: Coroutine) -> Any:
+        """Awaits an async function in a sync method.
+    
+        The sync method must be inside a :func:`greenlet_spawn` context.
+        :func:`await_only` calls cannot be nested.
+    
+        :param awaitable: The coroutine to call.
+    
+        """
+        # this is called in the context greenlet while running fn
+        current = greenlet.getcurrent()
+        if not isinstance(current, _AsyncIoGreenlet):
+            raise exc.MissingGreenlet(
+                "greenlet_spawn has not been called; can't call await_only() "
+                "here. Was IO attempted in an unexpected place?"
+            )
+    
+        # returns the control to the driver greenlet passing it
+        # a coroutine to run. Once the awaitable is done, the driver greenlet
+        # switches back to this greenlet with the result of awaitable that is
+        # then returned to the caller (or raised as error)
+>       return current.driver.switch(awaitable)
+
+venv\lib\site-packages\sqlalchemy\util\_concurrency_py3k.py:68: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+fn = <bound method Session.execute of <sqlalchemy.orm.session.Session object at 0x000001AC860F7FD0>>
+_require_await = False
+args = (<sqlalchemy.sql.selectable.Select object at 0x000001AC85FDB5E0>,)
+kwargs = {'bind_arguments': None, 'execution_options': immutabledict({'prebuffer_rows': True}), 'params': None}
+context = <_AsyncIoGreenlet object at 0x000001AC86126930 (otid=0x000001AC85FC94C0) dead>
+switch_occurred = True
+result = <coroutine object Cursor.execute at 0x000001AC86099740>
+value = <aiosqlite.cursor.Cursor object at 0x000001AC8611C760>
+
+    async def greenlet_spawn(
+        fn: Callable, *args, _require_await=False, **kwargs
+    ) -> Any:
+        """Runs a sync function ``fn`` in a new greenlet.
+    
+        The sync function can then use :func:`await_only` to wait for async
+        functions.
+    
+        :param fn: The sync callable to call.
+        :param \\*args: Positional arguments to pass to the ``fn`` callable.
+        :param \\*\\*kwargs: Keyword arguments to pass to the ``fn`` callable.
+        """
+    
+        context = _AsyncIoGreenlet(fn, greenlet.getcurrent())
+        # runs the function synchronously in gl greenlet. If the execution
+        # is interrupted by await_only, context is not dead and result is a
+        # coroutine to wait. If the context is dead the function has
+        # returned, and its result can be returned.
+        switch_occurred = False
+        try:
+            result = context.switch(*args, **kwargs)
+            while not context.dead:
+                switch_occurred = True
+                try:
+                    # wait for a coroutine from await_only and then return its
+                    # result back to it.
+>                   value = await result
+
+venv\lib\site-packages\sqlalchemy\util\_concurrency_py3k.py:121: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <aiosqlite.cursor.Cursor object at 0x000001AC8611C760>
+sql = 'SELECT charityproject.id \nFROM charityproject \nWHERE charityproject.name = ?'
+parameters = (CharityProjectUpdate(name='chimi', description=None, full_amount=None),)
+
+    async def execute(self, sql: str, parameters: Iterable[Any] = None) -> "Cursor":
+        """Execute the given query."""
+        if parameters is None:
+            parameters = []
+>       await self._execute(self._cursor.execute, sql, parameters)
+
+venv\lib\site-packages\aiosqlite\cursor.py:37: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <aiosqlite.cursor.Cursor object at 0x000001AC8611C760>
+fn = <built-in method execute of sqlite3.Cursor object at 0x000001AC86138880>
+args = ('SELECT charityproject.id \nFROM charityproject \nWHERE charityproject.name = ?', (CharityProjectUpdate(name='chimi', description=None, full_amount=None),))
+kwargs = {}
+
+    async def _execute(self, fn, *args, **kwargs):
+        """Execute the given function on the shared connection's thread."""
+>       return await self._conn._execute(fn, *args, **kwargs)
+
+venv\lib\site-packages\aiosqlite\cursor.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <Connection(Thread-100, stopped daemon 26144)>
+fn = <built-in method execute of sqlite3.Cursor object at 0x000001AC86138880>
+args = ('SELECT charityproject.id \nFROM charityproject \nWHERE charityproject.name = ?', (CharityProjectUpdate(name='chimi', description=None, full_amount=None),))
+kwargs = {}
+function = functools.partial(<built-in method execute of sqlite3.Cursor object at 0x000001AC86138880>, 'SELECT charityproject.id ...ityproject \nWHERE charityproject.name = ?', (CharityProjectUpdate(name='chimi', description=None, full_amount=None),))
+future = <Future finished exception=InterfaceError('Error binding parameter 0 - probably unsupported type.')>
+
+    async def _execute(self, fn, *args, **kwargs):
+        """Queue a function with the given arguments for execution."""
+        if not self._running or not self._connection:
+            raise ValueError("Connection closed")
+    
+        function = partial(fn, *args, **kwargs)
+        future = asyncio.get_event_loop().create_future()
+    
+        self._tx.put_nowait((future, function))
+    
+>       return await future
+
+venv\lib\site-packages\aiosqlite\core.py:129: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <Connection(Thread-100, stopped daemon 26144)>
+
+    def run(self) -> None:
+        """
+        Execute function calls on a separate thread.
+    
+        :meta private:
+        """
+        while True:
+            # Continues running until all queue items are processed,
+            # even after connection is closed (so we can finalize all
+            # futures)
+            try:
+                future, function = self._tx.get(timeout=0.1)
+            except Empty:
+                if self._running:
+                    continue
+                break
+            try:
+                LOG.debug("executing %s", function)
+>               result = function()
+E               sqlite3.InterfaceError: Error binding parameter 0 - probably unsupported type.
+
+venv\lib\site-packages\aiosqlite\core.py:102: InterfaceError
+
+The above exception was the direct cause of the following exception:
+
+superuser_client = <starlette.testclient.TestClient object at 0x000001AC8615CFA0>
+charity_project = <app.models.charity_project.CharityProject object at 0x000001AC86149A90>
+json = {'name': 'chimi'}
+expected_data = {'close_date': None, 'create_date': '2010-10-10T00:00:00', 'description': 'Huge fan of chimichangas. Wanna buy a lot', 'full_amount': 1000000, ...}
+
+    @pytest.mark.parametrize(
+        'json, expected_data',
+        [
+            (
+                {'full_amount': 10},
+                {
+                    'name': 'chimichangas4life',
+                    'description': 'Huge fan of chimichangas. Wanna buy a lot',
+                    'full_amount': 10,
+                    'id': 1,
+                    'invested_amount': 0,
+                    'fully_invested': False,
+                    'close_date': None,
+                    'create_date': '2010-10-10T00:00:00',
+                },
+            ),
+            (
+                {'name': 'chimi'},
+                {
+                    'name': 'chimi',
+                    'description': 'Huge fan of chimichangas. Wanna buy a lot',
+                    'full_amount': 1000000,
+                    'id': 1,
+                    'invested_amount': 0,
+                    'fully_invested': False,
+                    'close_date': None,
+                    'create_date': '2010-10-10T00:00:00',
+                },
+            ),
+            (
+                {'description': 'Give me the money!'},
+                {
+                    'name': 'chimichangas4life',
+                    'description': 'Give me the money!',
+                    'full_amount': 1000000,
+                    'id': 1,
+                    'invested_amount': 0,
+                    'fully_invested': False,
+                    'close_date': None,
+                    'create_date': '2010-10-10T00:00:00',
+                },
+            ),
+        ],
+    )
+    def test_update_charity_project(superuser_client, charity_project, json,
+                                    expected_data):
+>       response = superuser_client.patch('/charity_project/1', json=json)
+
+tests\test_charity_project.py:367: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+venv\lib\site-packages\requests\sessions.py:601: in patch
+    return self.request('PATCH', url, data=data, **kwargs)
+venv\lib\site-packages\starlette\testclient.py:476: in request
+    return super().request(
+venv\lib\site-packages\requests\sessions.py:529: in request
+    resp = self.send(prep, **send_kwargs)
+venv\lib\site-packages\requests\sessions.py:645: in send
+    r = adapter.send(request, **kwargs)
+venv\lib\site-packages\starlette\testclient.py:270: in send
+    raise exc
+venv\lib\site-packages\starlette\testclient.py:267: in send
+    portal.call(self.app, scope, receive, send)
+venv\lib\site-packages\anyio\from_thread.py:283: in call
+    return cast(T_Retval, self.start_task_soon(func, *args).result())
+C:\Program Files\Python39\lib\concurrent\futures\_base.py:446: in result
+    return self.__get_result()
+C:\Program Files\Python39\lib\concurrent\futures\_base.py:391: in __get_result
+    raise self._exception
+venv\lib\site-packages\anyio\from_thread.py:219: in _call_func
+    retval = await retval
+venv\lib\site-packages\fastapi\applications.py:269: in __call__
+    await super().__call__(scope, receive, send)
+venv\lib\site-packages\starlette\applications.py:124: in __call__
+    await self.middleware_stack(scope, receive, send)
+venv\lib\site-packages\starlette\middleware\errors.py:184: in __call__
+    raise exc
+venv\lib\site-packages\starlette\middleware\errors.py:162: in __call__
+    await self.app(scope, receive, _send)
+venv\lib\site-packages\starlette\exceptions.py:93: in __call__
+    raise exc
+venv\lib\site-packages\starlette\exceptions.py:82: in __call__
+    await self.app(scope, receive, sender)
+venv\lib\site-packages\fastapi\middleware\asyncexitstack.py:21: in __call__
+    raise e
+venv\lib\site-packages\fastapi\middleware\asyncexitstack.py:18: in __call__
+    await self.app(scope, receive, send)
+venv\lib\site-packages\starlette\routing.py:670: in __call__
+    await route.handle(scope, receive, send)
+venv\lib\site-packages\starlette\routing.py:266: in handle
+    await self.app(scope, receive, send)
+venv\lib\site-packages\starlette\routing.py:65: in app
+    response = await func(request)
+venv\lib\site-packages\fastapi\routing.py:227: in app
+    raw_response = await run_endpoint_function(
+venv\lib\site-packages\fastapi\routing.py:160: in run_endpoint_function
+    return await dependant.call(**values)
+app\api\endpoints\charity_project.py:79: in update_charity_project
+    await check_name_duplicate(obj_in, session)
+app\api\validators.py:14: in check_name_duplicate
+    project_id = await charity_project_crud.get_project_id_by_name(project_name, session)
+app\crud\charity_project.py:16: in get_project_id_by_name
+    db_project_id = await session.execute(
+venv\lib\site-packages\sqlalchemy\ext\asyncio\session.py:212: in execute
+    result = await greenlet_spawn(
+venv\lib\site-packages\sqlalchemy\util\_concurrency_py3k.py:126: in greenlet_spawn
+    result = context.throw(*sys.exc_info())
+venv\lib\site-packages\sqlalchemy\orm\session.py:1696: in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+venv\lib\site-packages\sqlalchemy\engine\base.py:1631: in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+venv\lib\site-packages\sqlalchemy\sql\elements.py:325: in _execute_on_connection
+    return connection._execute_clauseelement(
+venv\lib\site-packages\sqlalchemy\engine\base.py:1498: in _execute_clauseelement
+    ret = self._execute_context(
+venv\lib\site-packages\sqlalchemy\engine\base.py:1862: in _execute_context
+    self._handle_dbapi_exception(
+venv\lib\site-packages\sqlalchemy\engine\base.py:2043: in _handle_dbapi_exception
+    util.raise_(
+venv\lib\site-packages\sqlalchemy\util\compat.py:207: in raise_
+    raise exception
+venv\lib\site-packages\sqlalchemy\engine\base.py:1819: in _execute_context
+    self.dialect.do_execute(
+venv\lib\site-packages\sqlalchemy\engine\default.py:732: in do_execute
+    cursor.execute(statement, parameters)
+venv\lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py:100: in execute
+    self._adapt_connection._handle_exception(error)
+venv\lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py:229: in _handle_exception
+    raise error
+venv\lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py:82: in execute
+    self.await_(_cursor.execute(operation, parameters))
+venv\lib\site-packages\sqlalchemy\util\_concurrency_py3k.py:68: in await_only
+    return current.driver.switch(awaitable)
+venv\lib\site-packages\sqlalchemy\util\_concurrency_py3k.py:121: in greenlet_spawn
+    value = await result
+venv\lib\site-packages\aiosqlite\cursor.py:37: in execute
+    await self._execute(self._cursor.execute, sql, parameters)
+venv\lib\site-packages\aiosqlite\cursor.py:31: in _execute
+    return await self._conn._execute(fn, *args, **kwargs)
+venv\lib\site-packages\aiosqlite\core.py:129: in _execute
+    return await future
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <Connection(Thread-100, stopped daemon 26144)>
+
+    def run(self) -> None:
+        """
+        Execute function calls on a separate thread.
+    
+        :meta private:
+        """
+        while True:
+            # Continues running until all queue items are processed,
+            # even after connection is closed (so we can finalize all
+            # futures)
+            try:
+                future, function = self._tx.get(timeout=0.1)
+            except Empty:
+                if self._running:
+                    continue
+                break
+            try:
+                LOG.debug("executing %s", function)
+>               result = function()
+E               sqlalchemy.exc.InterfaceError: (sqlite3.InterfaceError) Error binding parameter 0 - probably unsupported type.
+E               [SQL: SELECT charityproject.id 
+E               FROM charityproject 
+E               WHERE charityproject.name = ?]
+E               [parameters: (CharityProjectUpdate(name='chimi', description=None, full_amount=None),)]
+E               (Background on this error at: https://sqlalche.me/e/14/rvf5)
+
+venv\lib\site-packages\aiosqlite\core.py:102: InterfaceError
+____________________ test_update_charity_project_same_name ____________________
+
+self = <sqlalchemy.future.engine.Connection object at 0x000001AC861557F0>
+dialect = <sqlalchemy.dialects.sqlite.aiosqlite.SQLiteDialect_aiosqlite object at 0x000001AC84D799A0>
+constructor = <bound method DefaultExecutionContext._init_compiled of <class 'sqlalchemy.dialects.sqlite.aiosqlite.SQLiteExecutionContext_aiosqlite'>>
+statement = 'SELECT charityproject.id \nFROM charityproject \nWHERE charityproject.name = ?'
+parameters = (CharityProjectUpdate(name='nunchaku', description='Huge fan of chimichangas. Wanna buy a lot', full_amount=1000000),)
+execution_options = immutabledict({'prebuffer_rows': True, '_result_disable_adapt_to_context': True, 'future_result': True})
+args = (<sqlalchemy.dialects.sqlite.base.SQLiteCompiler object at 0x000001AC86116310>, [{}], <sqlalchemy.sql.selectable.Selec...='nunchaku', description='Huge fan of chimichangas. Wanna buy a lot', full_amount=1000000), type_=String(length=100))])
+kw = {'cache_hit': symbol('CACHE_HIT')}
+branched = <sqlalchemy.future.engine.Connection object at 0x000001AC861557F0>
+conn = <sqlalchemy.pool.base._ConnectionFairy object at 0x000001AC85FE38E0>
+context = <sqlalchemy.dialects.sqlite.aiosqlite.SQLiteExecutionContext_aiosqlite object at 0x000001AC8615CC40>
+cursor = <sqlalchemy.dialects.sqlite.aiosqlite.AsyncAdapt_aiosqlite_cursor object at 0x000001AC865BA580>
+evt_handled = False
+
+    def _execute_context(
+        self,
+        dialect,
+        constructor,
+        statement,
+        parameters,
+        execution_options,
+        *args,
+        **kw
+    ):
+        """Create an :class:`.ExecutionContext` and execute, returning
+        a :class:`_engine.CursorResult`."""
+    
+        branched = self
+        if self.__branch_from:
+            # if this is a "branched" connection, do everything in terms
+            # of the "root" connection, *except* for .close(), which is
+            # the only feature that branching provides
+            self = self.__branch_from
+    
+        try:
+            conn = self._dbapi_connection
+            if conn is None:
+                conn = self._revalidate_connection()
+    
+            context = constructor(
+                dialect, self, conn, execution_options, *args, **kw
+            )
+        except (exc.PendingRollbackError, exc.ResourceClosedError):
+            raise
+        except BaseException as e:
+            self._handle_dbapi_exception(
+                e, util.text_type(statement), parameters, None, None
+            )
+    
+        if (
+            self._transaction
+            and not self._transaction.is_active
+            or (
+                self._nested_transaction
+                and not self._nested_transaction.is_active
+            )
+        ):
+            self._invalid_transaction()
+    
+        elif self._trans_context_manager:
+            TransactionalContext._trans_ctx_check(self)
+    
+        if self._is_future and self._transaction is None:
+            self._autobegin()
+    
+        context.pre_exec()
+    
+        if dialect.use_setinputsizes:
+            context._set_input_sizes()
+    
+        cursor, statement, parameters = (
+            context.cursor,
+            context.statement,
+            context.parameters,
+        )
+    
+        if not context.executemany:
+            parameters = parameters[0]
+    
+        if self._has_events or self.engine._has_events:
+            for fn in self.dispatch.before_cursor_execute:
+                statement, parameters = fn(
+                    self,
+                    cursor,
+                    statement,
+                    parameters,
+                    context,
+                    context.executemany,
+                )
+    
+        if self._echo:
+    
+            self._log_info(statement)
+    
+            stats = context._get_cache_stats()
+    
+            if not self.engine.hide_parameters:
+                self._log_info(
+                    "[%s] %r",
+                    stats,
+                    sql_util._repr_params(
+                        parameters, batches=10, ismulti=context.executemany
+                    ),
+                )
+            else:
+                self._log_info(
+                    "[%s] [SQL parameters hidden due to hide_parameters=True]"
+                    % (stats,)
+                )
+    
+        evt_handled = False
+        try:
+            if context.executemany:
+                if self.dialect._has_events:
+                    for fn in self.dialect.dispatch.do_executemany:
+                        if fn(cursor, statement, parameters, context):
+                            evt_handled = True
+                            break
+                if not evt_handled:
+                    self.dialect.do_executemany(
+                        cursor, statement, parameters, context
+                    )
+            elif not parameters and context.no_parameters:
+                if self.dialect._has_events:
+                    for fn in self.dialect.dispatch.do_execute_no_params:
+                        if fn(cursor, statement, context):
+                            evt_handled = True
+                            break
+                if not evt_handled:
+                    self.dialect.do_execute_no_params(
+                        cursor, statement, context
+                    )
+            else:
+                if self.dialect._has_events:
+                    for fn in self.dialect.dispatch.do_execute:
+                        if fn(cursor, statement, parameters, context):
+                            evt_handled = True
+                            break
+                if not evt_handled:
+>                   self.dialect.do_execute(
+                        cursor, statement, parameters, context
+                    )
+
+venv\lib\site-packages\sqlalchemy\engine\base.py:1819: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <sqlalchemy.dialects.sqlite.aiosqlite.SQLiteDialect_aiosqlite object at 0x000001AC84D799A0>
+cursor = <sqlalchemy.dialects.sqlite.aiosqlite.AsyncAdapt_aiosqlite_cursor object at 0x000001AC865BA580>
+statement = 'SELECT charityproject.id \nFROM charityproject \nWHERE charityproject.name = ?'
+parameters = (CharityProjectUpdate(name='nunchaku', description='Huge fan of chimichangas. Wanna buy a lot', full_amount=1000000),)
+context = <sqlalchemy.dialects.sqlite.aiosqlite.SQLiteExecutionContext_aiosqlite object at 0x000001AC8615CC40>
+
+    def do_execute(self, cursor, statement, parameters, context=None):
+>       cursor.execute(statement, parameters)
+
+venv\lib\site-packages\sqlalchemy\engine\default.py:732: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <sqlalchemy.dialects.sqlite.aiosqlite.AsyncAdapt_aiosqlite_cursor object at 0x000001AC865BA580>
+operation = 'SELECT charityproject.id \nFROM charityproject \nWHERE charityproject.name = ?'
+parameters = (CharityProjectUpdate(name='nunchaku', description='Huge fan of chimichangas. Wanna buy a lot', full_amount=1000000),)
+
+    def execute(self, operation, parameters=None):
+        try:
+            _cursor = self.await_(self._connection.cursor())
+    
+            if parameters is None:
+                self.await_(_cursor.execute(operation))
+            else:
+                self.await_(_cursor.execute(operation, parameters))
+    
+            if _cursor.description:
+                self.description = _cursor.description
+                self.lastrowid = self.rowcount = -1
+    
+                if not self.server_side:
+                    self._rows = self.await_(_cursor.fetchall())
+            else:
+                self.description = None
+                self.lastrowid = _cursor.lastrowid
+                self.rowcount = _cursor.rowcount
+    
+            if not self.server_side:
+                self.await_(_cursor.close())
+            else:
+                self._cursor = _cursor
+        except Exception as error:
+>           self._adapt_connection._handle_exception(error)
+
+venv\lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py:100: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <AdaptedConnection <Connection(Thread-140, stopped daemon 13336)>>
+error = InterfaceError('Error binding parameter 0 - probably unsupported type.')
+
+    def _handle_exception(self, error):
+        if (
+            isinstance(error, ValueError)
+            and error.args[0] == "no active connection"
+        ):
+            util.raise_(
+                self.dbapi.sqlite.OperationalError("no active connection"),
+                from_=error,
+            )
+        else:
+>           raise error
+
+venv\lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py:229: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <sqlalchemy.dialects.sqlite.aiosqlite.AsyncAdapt_aiosqlite_cursor object at 0x000001AC865BA580>
+operation = 'SELECT charityproject.id \nFROM charityproject \nWHERE charityproject.name = ?'
+parameters = (CharityProjectUpdate(name='nunchaku', description='Huge fan of chimichangas. Wanna buy a lot', full_amount=1000000),)
+
+    def execute(self, operation, parameters=None):
+        try:
+            _cursor = self.await_(self._connection.cursor())
+    
+            if parameters is None:
+                self.await_(_cursor.execute(operation))
+            else:
+>               self.await_(_cursor.execute(operation, parameters))
+
+venv\lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py:82: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+awaitable = <coroutine object Cursor.execute at 0x000001AC865C38C0>
+
+    def await_only(awaitable: Coroutine) -> Any:
+        """Awaits an async function in a sync method.
+    
+        The sync method must be inside a :func:`greenlet_spawn` context.
+        :func:`await_only` calls cannot be nested.
+    
+        :param awaitable: The coroutine to call.
+    
+        """
+        # this is called in the context greenlet while running fn
+        current = greenlet.getcurrent()
+        if not isinstance(current, _AsyncIoGreenlet):
+            raise exc.MissingGreenlet(
+                "greenlet_spawn has not been called; can't call await_only() "
+                "here. Was IO attempted in an unexpected place?"
+            )
+    
+        # returns the control to the driver greenlet passing it
+        # a coroutine to run. Once the awaitable is done, the driver greenlet
+        # switches back to this greenlet with the result of awaitable that is
+        # then returned to the caller (or raised as error)
+>       return current.driver.switch(awaitable)
+
+venv\lib\site-packages\sqlalchemy\util\_concurrency_py3k.py:68: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+fn = <bound method Session.execute of <sqlalchemy.orm.session.Session object at 0x000001AC85FE3BB0>>
+_require_await = False
+args = (<sqlalchemy.sql.selectable.Select object at 0x000001AC85FE3F40>,)
+kwargs = {'bind_arguments': None, 'execution_options': immutabledict({'prebuffer_rows': True}), 'params': None}
+context = <_AsyncIoGreenlet object at 0x000001AC865C1300 (otid=0x000001AC862FD840) dead>
+switch_occurred = True
+result = <coroutine object Cursor.execute at 0x000001AC865C38C0>
+value = <aiosqlite.cursor.Cursor object at 0x000001AC8615CA00>
+
+    async def greenlet_spawn(
+        fn: Callable, *args, _require_await=False, **kwargs
+    ) -> Any:
+        """Runs a sync function ``fn`` in a new greenlet.
+    
+        The sync function can then use :func:`await_only` to wait for async
+        functions.
+    
+        :param fn: The sync callable to call.
+        :param \\*args: Positional arguments to pass to the ``fn`` callable.
+        :param \\*\\*kwargs: Keyword arguments to pass to the ``fn`` callable.
+        """
+    
+        context = _AsyncIoGreenlet(fn, greenlet.getcurrent())
+        # runs the function synchronously in gl greenlet. If the execution
+        # is interrupted by await_only, context is not dead and result is a
+        # coroutine to wait. If the context is dead the function has
+        # returned, and its result can be returned.
+        switch_occurred = False
+        try:
+            result = context.switch(*args, **kwargs)
+            while not context.dead:
+                switch_occurred = True
+                try:
+                    # wait for a coroutine from await_only and then return its
+                    # result back to it.
+>                   value = await result
+
+venv\lib\site-packages\sqlalchemy\util\_concurrency_py3k.py:121: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <aiosqlite.cursor.Cursor object at 0x000001AC8615CA00>
+sql = 'SELECT charityproject.id \nFROM charityproject \nWHERE charityproject.name = ?'
+parameters = (CharityProjectUpdate(name='nunchaku', description='Huge fan of chimichangas. Wanna buy a lot', full_amount=1000000),)
+
+    async def execute(self, sql: str, parameters: Iterable[Any] = None) -> "Cursor":
+        """Execute the given query."""
+        if parameters is None:
+            parameters = []
+>       await self._execute(self._cursor.execute, sql, parameters)
+
+venv\lib\site-packages\aiosqlite\cursor.py:37: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <aiosqlite.cursor.Cursor object at 0x000001AC8615CA00>
+fn = <built-in method execute of sqlite3.Cursor object at 0x000001AC86CBDE30>
+args = ('SELECT charityproject.id \nFROM charityproject \nWHERE charityproject.name = ?', (CharityProjectUpdate(name='nunchaku', description='Huge fan of chimichangas. Wanna buy a lot', full_amount=1000000),))
+kwargs = {}
+
+    async def _execute(self, fn, *args, **kwargs):
+        """Execute the given function on the shared connection's thread."""
+>       return await self._conn._execute(fn, *args, **kwargs)
+
+venv\lib\site-packages\aiosqlite\cursor.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <Connection(Thread-140, stopped daemon 13336)>
+fn = <built-in method execute of sqlite3.Cursor object at 0x000001AC86CBDE30>
+args = ('SELECT charityproject.id \nFROM charityproject \nWHERE charityproject.name = ?', (CharityProjectUpdate(name='nunchaku', description='Huge fan of chimichangas. Wanna buy a lot', full_amount=1000000),))
+kwargs = {}
+function = functools.partial(<built-in method execute of sqlite3.Cursor object at 0x000001AC86CBDE30>, 'SELECT charityproject.id ...(CharityProjectUpdate(name='nunchaku', description='Huge fan of chimichangas. Wanna buy a lot', full_amount=1000000),))
+future = <Future finished exception=InterfaceError('Error binding parameter 0 - probably unsupported type.')>
+
+    async def _execute(self, fn, *args, **kwargs):
+        """Queue a function with the given arguments for execution."""
+        if not self._running or not self._connection:
+            raise ValueError("Connection closed")
+    
+        function = partial(fn, *args, **kwargs)
+        future = asyncio.get_event_loop().create_future()
+    
+        self._tx.put_nowait((future, function))
+    
+>       return await future
+
+venv\lib\site-packages\aiosqlite\core.py:129: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <Connection(Thread-140, stopped daemon 13336)>
+
+    def run(self) -> None:
+        """
+        Execute function calls on a separate thread.
+    
+        :meta private:
+        """
+        while True:
+            # Continues running until all queue items are processed,
+            # even after connection is closed (so we can finalize all
+            # futures)
+            try:
+                future, function = self._tx.get(timeout=0.1)
+            except Empty:
+                if self._running:
+                    continue
+                break
+            try:
+                LOG.debug("executing %s", function)
+>               result = function()
+E               sqlite3.InterfaceError: Error binding parameter 0 - probably unsupported type.
+
+venv\lib\site-packages\aiosqlite\core.py:102: InterfaceError
+
+The above exception was the direct cause of the following exception:
+
+superuser_client = <starlette.testclient.TestClient object at 0x000001AC86CC3A60>
+charity_project = <app.models.charity_project.CharityProject object at 0x000001AC860E1940>
+charity_project_nunchaku = <app.models.charity_project.CharityProject object at 0x000001AC866AE4F0>
+
+    def test_update_charity_project_same_name(superuser_client, charity_project,
+                                              charity_project_nunchaku):
+>       response = superuser_client.patch(
+            '/charity_project/1',
+            json={
+                'name': 'nunchaku',
+                'description': 'Huge fan of chimichangas. Wanna buy a lot',
+                'full_amount': 1000000,
+            },
+        )
+
+tests\test_charity_project.py:454: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+venv\lib\site-packages\requests\sessions.py:601: in patch
+    return self.request('PATCH', url, data=data, **kwargs)
+venv\lib\site-packages\starlette\testclient.py:476: in request
+    return super().request(
+venv\lib\site-packages\requests\sessions.py:529: in request
+    resp = self.send(prep, **send_kwargs)
+venv\lib\site-packages\requests\sessions.py:645: in send
+    r = adapter.send(request, **kwargs)
+venv\lib\site-packages\starlette\testclient.py:270: in send
+    raise exc
+venv\lib\site-packages\starlette\testclient.py:267: in send
+    portal.call(self.app, scope, receive, send)
+venv\lib\site-packages\anyio\from_thread.py:283: in call
+    return cast(T_Retval, self.start_task_soon(func, *args).result())
+C:\Program Files\Python39\lib\concurrent\futures\_base.py:446: in result
+    return self.__get_result()
+C:\Program Files\Python39\lib\concurrent\futures\_base.py:391: in __get_result
+    raise self._exception
+venv\lib\site-packages\anyio\from_thread.py:219: in _call_func
+    retval = await retval
+venv\lib\site-packages\fastapi\applications.py:269: in __call__
+    await super().__call__(scope, receive, send)
+venv\lib\site-packages\starlette\applications.py:124: in __call__
+    await self.middleware_stack(scope, receive, send)
+venv\lib\site-packages\starlette\middleware\errors.py:184: in __call__
+    raise exc
+venv\lib\site-packages\starlette\middleware\errors.py:162: in __call__
+    await self.app(scope, receive, _send)
+venv\lib\site-packages\starlette\exceptions.py:93: in __call__
+    raise exc
+venv\lib\site-packages\starlette\exceptions.py:82: in __call__
+    await self.app(scope, receive, sender)
+venv\lib\site-packages\fastapi\middleware\asyncexitstack.py:21: in __call__
+    raise e
+venv\lib\site-packages\fastapi\middleware\asyncexitstack.py:18: in __call__
+    await self.app(scope, receive, send)
+venv\lib\site-packages\starlette\routing.py:670: in __call__
+    await route.handle(scope, receive, send)
+venv\lib\site-packages\starlette\routing.py:266: in handle
+    await self.app(scope, receive, send)
+venv\lib\site-packages\starlette\routing.py:65: in app
+    response = await func(request)
+venv\lib\site-packages\fastapi\routing.py:227: in app
+    raw_response = await run_endpoint_function(
+venv\lib\site-packages\fastapi\routing.py:160: in run_endpoint_function
+    return await dependant.call(**values)
+app\api\endpoints\charity_project.py:79: in update_charity_project
+    await check_name_duplicate(obj_in, session)
+app\api\validators.py:14: in check_name_duplicate
+    project_id = await charity_project_crud.get_project_id_by_name(project_name, session)
+app\crud\charity_project.py:16: in get_project_id_by_name
+    db_project_id = await session.execute(
+venv\lib\site-packages\sqlalchemy\ext\asyncio\session.py:212: in execute
+    result = await greenlet_spawn(
+venv\lib\site-packages\sqlalchemy\util\_concurrency_py3k.py:126: in greenlet_spawn
+    result = context.throw(*sys.exc_info())
+venv\lib\site-packages\sqlalchemy\orm\session.py:1696: in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+venv\lib\site-packages\sqlalchemy\engine\base.py:1631: in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+venv\lib\site-packages\sqlalchemy\sql\elements.py:325: in _execute_on_connection
+    return connection._execute_clauseelement(
+venv\lib\site-packages\sqlalchemy\engine\base.py:1498: in _execute_clauseelement
+    ret = self._execute_context(
+venv\lib\site-packages\sqlalchemy\engine\base.py:1862: in _execute_context
+    self._handle_dbapi_exception(
+venv\lib\site-packages\sqlalchemy\engine\base.py:2043: in _handle_dbapi_exception
+    util.raise_(
+venv\lib\site-packages\sqlalchemy\util\compat.py:207: in raise_
+    raise exception
+venv\lib\site-packages\sqlalchemy\engine\base.py:1819: in _execute_context
+    self.dialect.do_execute(
+venv\lib\site-packages\sqlalchemy\engine\default.py:732: in do_execute
+    cursor.execute(statement, parameters)
+venv\lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py:100: in execute
+    self._adapt_connection._handle_exception(error)
+venv\lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py:229: in _handle_exception
+    raise error
+venv\lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py:82: in execute
+    self.await_(_cursor.execute(operation, parameters))
+venv\lib\site-packages\sqlalchemy\util\_concurrency_py3k.py:68: in await_only
+    return current.driver.switch(awaitable)
+venv\lib\site-packages\sqlalchemy\util\_concurrency_py3k.py:121: in greenlet_spawn
+    value = await result
+venv\lib\site-packages\aiosqlite\cursor.py:37: in execute
+    await self._execute(self._cursor.execute, sql, parameters)
+venv\lib\site-packages\aiosqlite\cursor.py:31: in _execute
+    return await self._conn._execute(fn, *args, **kwargs)
+venv\lib\site-packages\aiosqlite\core.py:129: in _execute
+    return await future
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <Connection(Thread-140, stopped daemon 13336)>
+
+    def run(self) -> None:
+        """
+        Execute function calls on a separate thread.
+    
+        :meta private:
+        """
+        while True:
+            # Continues running until all queue items are processed,
+            # even after connection is closed (so we can finalize all
+            # futures)
+            try:
+                future, function = self._tx.get(timeout=0.1)
+            except Empty:
+                if self._running:
+                    continue
+                break
+            try:
+                LOG.debug("executing %s", function)
+>               result = function()
+E               sqlalchemy.exc.InterfaceError: (sqlite3.InterfaceError) Error binding parameter 0 - probably unsupported type.
+E               [SQL: SELECT charityproject.id 
+E               FROM charityproject 
+E               WHERE charityproject.name = ?]
+E               [parameters: (CharityProjectUpdate(name='nunchaku', description='Huge fan of chimichangas. Wanna buy a lot', full_amount=1000000),)]
+E               (Background on this error at: https://sqlalche.me/e/14/rvf5)
+
+venv\lib\site-packages\aiosqlite\core.py:102: InterfaceError
+_____ test_update_charity_project_full_amount_smaller_already_invested[5] _____
+
+self = <sqlalchemy.future.engine.Connection object at 0x000001AC86FF2730>
+dialect = <sqlalchemy.dialects.sqlite.aiosqlite.SQLiteDialect_aiosqlite object at 0x000001AC84D799A0>
+constructor = <bound method DefaultExecutionContext._init_compiled of <class 'sqlalchemy.dialects.sqlite.aiosqlite.SQLiteExecutionContext_aiosqlite'>>
+statement = 'SELECT charityproject.id \nFROM charityproject \nWHERE charityproject.name = ?'
+parameters = (CharityProjectUpdate(name='nunchaku', description='Huge fan of chimichangas. Wanna buy a lot', full_amount=5),)
+execution_options = immutabledict({'prebuffer_rows': True, '_result_disable_adapt_to_context': True, 'future_result': True})
+args = (<sqlalchemy.dialects.sqlite.base.SQLiteCompiler object at 0x000001AC86116310>, [{}], <sqlalchemy.sql.selectable.Selec...e(name='nunchaku', description='Huge fan of chimichangas. Wanna buy a lot', full_amount=5), type_=String(length=100))])
+kw = {'cache_hit': symbol('CACHE_HIT')}
+branched = <sqlalchemy.future.engine.Connection object at 0x000001AC86FF2730>
+conn = <sqlalchemy.pool.base._ConnectionFairy object at 0x000001AC86FF2400>
+context = <sqlalchemy.dialects.sqlite.aiosqlite.SQLiteExecutionContext_aiosqlite object at 0x000001AC86FF2E20>
+cursor = <sqlalchemy.dialects.sqlite.aiosqlite.AsyncAdapt_aiosqlite_cursor object at 0x000001AC86C6BD00>
+evt_handled = False
+
+    def _execute_context(
+        self,
+        dialect,
+        constructor,
+        statement,
+        parameters,
+        execution_options,
+        *args,
+        **kw
+    ):
+        """Create an :class:`.ExecutionContext` and execute, returning
+        a :class:`_engine.CursorResult`."""
+    
+        branched = self
+        if self.__branch_from:
+            # if this is a "branched" connection, do everything in terms
+            # of the "root" connection, *except* for .close(), which is
+            # the only feature that branching provides
+            self = self.__branch_from
+    
+        try:
+            conn = self._dbapi_connection
+            if conn is None:
+                conn = self._revalidate_connection()
+    
+            context = constructor(
+                dialect, self, conn, execution_options, *args, **kw
+            )
+        except (exc.PendingRollbackError, exc.ResourceClosedError):
+            raise
+        except BaseException as e:
+            self._handle_dbapi_exception(
+                e, util.text_type(statement), parameters, None, None
+            )
+    
+        if (
+            self._transaction
+            and not self._transaction.is_active
+            or (
+                self._nested_transaction
+                and not self._nested_transaction.is_active
+            )
+        ):
+            self._invalid_transaction()
+    
+        elif self._trans_context_manager:
+            TransactionalContext._trans_ctx_check(self)
+    
+        if self._is_future and self._transaction is None:
+            self._autobegin()
+    
+        context.pre_exec()
+    
+        if dialect.use_setinputsizes:
+            context._set_input_sizes()
+    
+        cursor, statement, parameters = (
+            context.cursor,
+            context.statement,
+            context.parameters,
+        )
+    
+        if not context.executemany:
+            parameters = parameters[0]
+    
+        if self._has_events or self.engine._has_events:
+            for fn in self.dispatch.before_cursor_execute:
+                statement, parameters = fn(
+                    self,
+                    cursor,
+                    statement,
+                    parameters,
+                    context,
+                    context.executemany,
+                )
+    
+        if self._echo:
+    
+            self._log_info(statement)
+    
+            stats = context._get_cache_stats()
+    
+            if not self.engine.hide_parameters:
+                self._log_info(
+                    "[%s] %r",
+                    stats,
+                    sql_util._repr_params(
+                        parameters, batches=10, ismulti=context.executemany
+                    ),
+                )
+            else:
+                self._log_info(
+                    "[%s] [SQL parameters hidden due to hide_parameters=True]"
+                    % (stats,)
+                )
+    
+        evt_handled = False
+        try:
+            if context.executemany:
+                if self.dialect._has_events:
+                    for fn in self.dialect.dispatch.do_executemany:
+                        if fn(cursor, statement, parameters, context):
+                            evt_handled = True
+                            break
+                if not evt_handled:
+                    self.dialect.do_executemany(
+                        cursor, statement, parameters, context
+                    )
+            elif not parameters and context.no_parameters:
+                if self.dialect._has_events:
+                    for fn in self.dialect.dispatch.do_execute_no_params:
+                        if fn(cursor, statement, context):
+                            evt_handled = True
+                            break
+                if not evt_handled:
+                    self.dialect.do_execute_no_params(
+                        cursor, statement, context
+                    )
+            else:
+                if self.dialect._has_events:
+                    for fn in self.dialect.dispatch.do_execute:
+                        if fn(cursor, statement, parameters, context):
+                            evt_handled = True
+                            break
+                if not evt_handled:
+>                   self.dialect.do_execute(
+                        cursor, statement, parameters, context
+                    )
+
+venv\lib\site-packages\sqlalchemy\engine\base.py:1819: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <sqlalchemy.dialects.sqlite.aiosqlite.SQLiteDialect_aiosqlite object at 0x000001AC84D799A0>
+cursor = <sqlalchemy.dialects.sqlite.aiosqlite.AsyncAdapt_aiosqlite_cursor object at 0x000001AC86C6BD00>
+statement = 'SELECT charityproject.id \nFROM charityproject \nWHERE charityproject.name = ?'
+parameters = (CharityProjectUpdate(name='nunchaku', description='Huge fan of chimichangas. Wanna buy a lot', full_amount=5),)
+context = <sqlalchemy.dialects.sqlite.aiosqlite.SQLiteExecutionContext_aiosqlite object at 0x000001AC86FF2E20>
+
+    def do_execute(self, cursor, statement, parameters, context=None):
+>       cursor.execute(statement, parameters)
+
+venv\lib\site-packages\sqlalchemy\engine\default.py:732: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <sqlalchemy.dialects.sqlite.aiosqlite.AsyncAdapt_aiosqlite_cursor object at 0x000001AC86C6BD00>
+operation = 'SELECT charityproject.id \nFROM charityproject \nWHERE charityproject.name = ?'
+parameters = (CharityProjectUpdate(name='nunchaku', description='Huge fan of chimichangas. Wanna buy a lot', full_amount=5),)
+
+    def execute(self, operation, parameters=None):
+        try:
+            _cursor = self.await_(self._connection.cursor())
+    
+            if parameters is None:
+                self.await_(_cursor.execute(operation))
+            else:
+                self.await_(_cursor.execute(operation, parameters))
+    
+            if _cursor.description:
+                self.description = _cursor.description
+                self.lastrowid = self.rowcount = -1
+    
+                if not self.server_side:
+                    self._rows = self.await_(_cursor.fetchall())
+            else:
+                self.description = None
+                self.lastrowid = _cursor.lastrowid
+                self.rowcount = _cursor.rowcount
+    
+            if not self.server_side:
+                self.await_(_cursor.close())
+            else:
+                self._cursor = _cursor
+        except Exception as error:
+>           self._adapt_connection._handle_exception(error)
+
+venv\lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py:100: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <AdaptedConnection <Connection(Thread-147, stopped daemon 14344)>>
+error = InterfaceError('Error binding parameter 0 - probably unsupported type.')
+
+    def _handle_exception(self, error):
+        if (
+            isinstance(error, ValueError)
+            and error.args[0] == "no active connection"
+        ):
+            util.raise_(
+                self.dbapi.sqlite.OperationalError("no active connection"),
+                from_=error,
+            )
+        else:
+>           raise error
+
+venv\lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py:229: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <sqlalchemy.dialects.sqlite.aiosqlite.AsyncAdapt_aiosqlite_cursor object at 0x000001AC86C6BD00>
+operation = 'SELECT charityproject.id \nFROM charityproject \nWHERE charityproject.name = ?'
+parameters = (CharityProjectUpdate(name='nunchaku', description='Huge fan of chimichangas. Wanna buy a lot', full_amount=5),)
+
+    def execute(self, operation, parameters=None):
+        try:
+            _cursor = self.await_(self._connection.cursor())
+    
+            if parameters is None:
+                self.await_(_cursor.execute(operation))
+            else:
+>               self.await_(_cursor.execute(operation, parameters))
+
+venv\lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py:82: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+awaitable = <coroutine object Cursor.execute at 0x000001AC8713B4C0>
+
+    def await_only(awaitable: Coroutine) -> Any:
+        """Awaits an async function in a sync method.
+    
+        The sync method must be inside a :func:`greenlet_spawn` context.
+        :func:`await_only` calls cannot be nested.
+    
+        :param awaitable: The coroutine to call.
+    
+        """
+        # this is called in the context greenlet while running fn
+        current = greenlet.getcurrent()
+        if not isinstance(current, _AsyncIoGreenlet):
+            raise exc.MissingGreenlet(
+                "greenlet_spawn has not been called; can't call await_only() "
+                "here. Was IO attempted in an unexpected place?"
+            )
+    
+        # returns the control to the driver greenlet passing it
+        # a coroutine to run. Once the awaitable is done, the driver greenlet
+        # switches back to this greenlet with the result of awaitable that is
+        # then returned to the caller (or raised as error)
+>       return current.driver.switch(awaitable)
+
+venv\lib\site-packages\sqlalchemy\util\_concurrency_py3k.py:68: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+fn = <bound method Session.execute of <sqlalchemy.orm.session.Session object at 0x000001AC86FF2A00>>
+_require_await = False
+args = (<sqlalchemy.sql.selectable.Select object at 0x000001AC86FF2EE0>,)
+kwargs = {'bind_arguments': None, 'execution_options': immutabledict({'prebuffer_rows': True}), 'params': None}
+context = <_AsyncIoGreenlet object at 0x000001AC85FF39E0 (otid=0x000001AC86153AC0) dead>
+switch_occurred = True
+result = <coroutine object Cursor.execute at 0x000001AC8713B4C0>
+value = <aiosqlite.cursor.Cursor object at 0x000001AC86FF2C40>
+
+    async def greenlet_spawn(
+        fn: Callable, *args, _require_await=False, **kwargs
+    ) -> Any:
+        """Runs a sync function ``fn`` in a new greenlet.
+    
+        The sync function can then use :func:`await_only` to wait for async
+        functions.
+    
+        :param fn: The sync callable to call.
+        :param \\*args: Positional arguments to pass to the ``fn`` callable.
+        :param \\*\\*kwargs: Keyword arguments to pass to the ``fn`` callable.
+        """
+    
+        context = _AsyncIoGreenlet(fn, greenlet.getcurrent())
+        # runs the function synchronously in gl greenlet. If the execution
+        # is interrupted by await_only, context is not dead and result is a
+        # coroutine to wait. If the context is dead the function has
+        # returned, and its result can be returned.
+        switch_occurred = False
+        try:
+            result = context.switch(*args, **kwargs)
+            while not context.dead:
+                switch_occurred = True
+                try:
+                    # wait for a coroutine from await_only and then return its
+                    # result back to it.
+>                   value = await result
+
+venv\lib\site-packages\sqlalchemy\util\_concurrency_py3k.py:121: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <aiosqlite.cursor.Cursor object at 0x000001AC86FF2C40>
+sql = 'SELECT charityproject.id \nFROM charityproject \nWHERE charityproject.name = ?'
+parameters = (CharityProjectUpdate(name='nunchaku', description='Huge fan of chimichangas. Wanna buy a lot', full_amount=5),)
+
+    async def execute(self, sql: str, parameters: Iterable[Any] = None) -> "Cursor":
+        """Execute the given query."""
+        if parameters is None:
+            parameters = []
+>       await self._execute(self._cursor.execute, sql, parameters)
+
+venv\lib\site-packages\aiosqlite\cursor.py:37: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <aiosqlite.cursor.Cursor object at 0x000001AC86FF2C40>
+fn = <built-in method execute of sqlite3.Cursor object at 0x000001AC865B6B90>
+args = ('SELECT charityproject.id \nFROM charityproject \nWHERE charityproject.name = ?', (CharityProjectUpdate(name='nunchaku', description='Huge fan of chimichangas. Wanna buy a lot', full_amount=5),))
+kwargs = {}
+
+    async def _execute(self, fn, *args, **kwargs):
+        """Execute the given function on the shared connection's thread."""
+>       return await self._conn._execute(fn, *args, **kwargs)
+
+venv\lib\site-packages\aiosqlite\cursor.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <Connection(Thread-147, stopped daemon 14344)>
+fn = <built-in method execute of sqlite3.Cursor object at 0x000001AC865B6B90>
+args = ('SELECT charityproject.id \nFROM charityproject \nWHERE charityproject.name = ?', (CharityProjectUpdate(name='nunchaku', description='Huge fan of chimichangas. Wanna buy a lot', full_amount=5),))
+kwargs = {}
+function = functools.partial(<built-in method execute of sqlite3.Cursor object at 0x000001AC865B6B90>, 'SELECT charityproject.id ...= ?', (CharityProjectUpdate(name='nunchaku', description='Huge fan of chimichangas. Wanna buy a lot', full_amount=5),))
+future = <Future finished exception=InterfaceError('Error binding parameter 0 - probably unsupported type.')>
+
+    async def _execute(self, fn, *args, **kwargs):
+        """Queue a function with the given arguments for execution."""
+        if not self._running or not self._connection:
+            raise ValueError("Connection closed")
+    
+        function = partial(fn, *args, **kwargs)
+        future = asyncio.get_event_loop().create_future()
+    
+        self._tx.put_nowait((future, function))
+    
+>       return await future
+
+venv\lib\site-packages\aiosqlite\core.py:129: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <Connection(Thread-147, stopped daemon 14344)>
+
+    def run(self) -> None:
+        """
+        Execute function calls on a separate thread.
+    
+        :meta private:
+        """
+        while True:
+            # Continues running until all queue items are processed,
+            # even after connection is closed (so we can finalize all
+            # futures)
+            try:
+                future, function = self._tx.get(timeout=0.1)
+            except Empty:
+                if self._running:
+                    continue
+                break
+            try:
+                LOG.debug("executing %s", function)
+>               result = function()
+E               sqlite3.InterfaceError: Error binding parameter 0 - probably unsupported type.
+
+venv\lib\site-packages\aiosqlite\core.py:102: InterfaceError
+
+The above exception was the direct cause of the following exception:
+
+superuser_client = <starlette.testclient.TestClient object at 0x000001AC867B19D0>
+charity_project_little_invested = <app.models.charity_project.CharityProject object at 0x000001AC8678EA00>
+full_amount = 5
+
+    @pytest.mark.parametrize('full_amount', [
+        0,
+        5,
+    ])
+    def test_update_charity_project_full_amount_smaller_already_invested(
+        superuser_client, charity_project_little_invested, full_amount
+    ):
+>       response = superuser_client.patch(
+            '/charity_project/1',
+            json={
+                'name': 'nunchaku',
+                'description': 'Huge fan of chimichangas. Wanna buy a lot',
+                'full_amount': full_amount,
+            },
+        )
+
+tests\test_charity_project.py:477: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+venv\lib\site-packages\requests\sessions.py:601: in patch
+    return self.request('PATCH', url, data=data, **kwargs)
+venv\lib\site-packages\starlette\testclient.py:476: in request
+    return super().request(
+venv\lib\site-packages\requests\sessions.py:529: in request
+    resp = self.send(prep, **send_kwargs)
+venv\lib\site-packages\requests\sessions.py:645: in send
+    r = adapter.send(request, **kwargs)
+venv\lib\site-packages\starlette\testclient.py:270: in send
+    raise exc
+venv\lib\site-packages\starlette\testclient.py:267: in send
+    portal.call(self.app, scope, receive, send)
+venv\lib\site-packages\anyio\from_thread.py:283: in call
+    return cast(T_Retval, self.start_task_soon(func, *args).result())
+C:\Program Files\Python39\lib\concurrent\futures\_base.py:446: in result
+    return self.__get_result()
+C:\Program Files\Python39\lib\concurrent\futures\_base.py:391: in __get_result
+    raise self._exception
+venv\lib\site-packages\anyio\from_thread.py:219: in _call_func
+    retval = await retval
+venv\lib\site-packages\fastapi\applications.py:269: in __call__
+    await super().__call__(scope, receive, send)
+venv\lib\site-packages\starlette\applications.py:124: in __call__
+    await self.middleware_stack(scope, receive, send)
+venv\lib\site-packages\starlette\middleware\errors.py:184: in __call__
+    raise exc
+venv\lib\site-packages\starlette\middleware\errors.py:162: in __call__
+    await self.app(scope, receive, _send)
+venv\lib\site-packages\starlette\exceptions.py:93: in __call__
+    raise exc
+venv\lib\site-packages\starlette\exceptions.py:82: in __call__
+    await self.app(scope, receive, sender)
+venv\lib\site-packages\fastapi\middleware\asyncexitstack.py:21: in __call__
+    raise e
+venv\lib\site-packages\fastapi\middleware\asyncexitstack.py:18: in __call__
+    await self.app(scope, receive, send)
+venv\lib\site-packages\starlette\routing.py:670: in __call__
+    await route.handle(scope, receive, send)
+venv\lib\site-packages\starlette\routing.py:266: in handle
+    await self.app(scope, receive, send)
+venv\lib\site-packages\starlette\routing.py:65: in app
+    response = await func(request)
+venv\lib\site-packages\fastapi\routing.py:227: in app
+    raw_response = await run_endpoint_function(
+venv\lib\site-packages\fastapi\routing.py:160: in run_endpoint_function
+    return await dependant.call(**values)
+app\api\endpoints\charity_project.py:79: in update_charity_project
+    await check_name_duplicate(obj_in, session)
+app\api\validators.py:14: in check_name_duplicate
+    project_id = await charity_project_crud.get_project_id_by_name(project_name, session)
+app\crud\charity_project.py:16: in get_project_id_by_name
+    db_project_id = await session.execute(
+venv\lib\site-packages\sqlalchemy\ext\asyncio\session.py:212: in execute
+    result = await greenlet_spawn(
+venv\lib\site-packages\sqlalchemy\util\_concurrency_py3k.py:126: in greenlet_spawn
+    result = context.throw(*sys.exc_info())
+venv\lib\site-packages\sqlalchemy\orm\session.py:1696: in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+venv\lib\site-packages\sqlalchemy\engine\base.py:1631: in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+venv\lib\site-packages\sqlalchemy\sql\elements.py:325: in _execute_on_connection
+    return connection._execute_clauseelement(
+venv\lib\site-packages\sqlalchemy\engine\base.py:1498: in _execute_clauseelement
+    ret = self._execute_context(
+venv\lib\site-packages\sqlalchemy\engine\base.py:1862: in _execute_context
+    self._handle_dbapi_exception(
+venv\lib\site-packages\sqlalchemy\engine\base.py:2043: in _handle_dbapi_exception
+    util.raise_(
+venv\lib\site-packages\sqlalchemy\util\compat.py:207: in raise_
+    raise exception
+venv\lib\site-packages\sqlalchemy\engine\base.py:1819: in _execute_context
+    self.dialect.do_execute(
+venv\lib\site-packages\sqlalchemy\engine\default.py:732: in do_execute
+    cursor.execute(statement, parameters)
+venv\lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py:100: in execute
+    self._adapt_connection._handle_exception(error)
+venv\lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py:229: in _handle_exception
+    raise error
+venv\lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py:82: in execute
+    self.await_(_cursor.execute(operation, parameters))
+venv\lib\site-packages\sqlalchemy\util\_concurrency_py3k.py:68: in await_only
+    return current.driver.switch(awaitable)
+venv\lib\site-packages\sqlalchemy\util\_concurrency_py3k.py:121: in greenlet_spawn
+    value = await result
+venv\lib\site-packages\aiosqlite\cursor.py:37: in execute
+    await self._execute(self._cursor.execute, sql, parameters)
+venv\lib\site-packages\aiosqlite\cursor.py:31: in _execute
+    return await self._conn._execute(fn, *args, **kwargs)
+venv\lib\site-packages\aiosqlite\core.py:129: in _execute
+    return await future
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <Connection(Thread-147, stopped daemon 14344)>
+
+    def run(self) -> None:
+        """
+        Execute function calls on a separate thread.
+    
+        :meta private:
+        """
+        while True:
+            # Continues running until all queue items are processed,
+            # even after connection is closed (so we can finalize all
+            # futures)
+            try:
+                future, function = self._tx.get(timeout=0.1)
+            except Empty:
+                if self._running:
+                    continue
+                break
+            try:
+                LOG.debug("executing %s", function)
+>               result = function()
+E               sqlalchemy.exc.InterfaceError: (sqlite3.InterfaceError) Error binding parameter 0 - probably unsupported type.
+E               [SQL: SELECT charityproject.id 
+E               FROM charityproject 
+E               WHERE charityproject.name = ?]
+E               [parameters: (CharityProjectUpdate(name='nunchaku', description='Huge fan of chimichangas. Wanna buy a lot', full_amount=5),)]
+E               (Background on this error at: https://sqlalche.me/e/14/rvf5)
+
+venv\lib\site-packages\aiosqlite\core.py:102: InterfaceError
+=========================== short test summary info ===========================
+FAILED tests/test_charity_project.py::test_update_charity_project[json1-expected_data1]
+FAILED tests/test_charity_project.py::test_update_charity_project_same_name
+FAILED tests/test_charity_project.py::test_update_charity_project_full_amount_smaller_already_invested[5]
+======================== 3 failed, 75 passed in 10.02s ========================
