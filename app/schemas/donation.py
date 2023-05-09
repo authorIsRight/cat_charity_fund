@@ -10,6 +10,9 @@ class DonationBase(BaseModel):
 
 
 class DonationCreate(DonationBase):
+    id: int
+    create_date: datetime
+
     class Config:
         orm_mode = True
 
