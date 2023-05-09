@@ -1,10 +1,9 @@
 from datetime import datetime
 from typing import List, Union
 
+from app.models import CharityProject, Donation
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
-
-from app.models import CharityProject, Donation
 
 
 async def close_donation_for_obj(obj: Union[CharityProject, Donation]) -> Union[CharityProject, Donation]:
