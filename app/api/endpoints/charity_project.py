@@ -1,5 +1,8 @@
 from typing import List
 
+from fastapi import APIRouter, Depends
+from sqlalchemy.ext.asyncio import AsyncSession
+
 from app.api.validators import (check_charity_project_closed,
                                 check_charity_project_exists,
                                 check_charity_project_was_invested,
@@ -13,8 +16,7 @@ from app.schemas.charity_project import (CharityProjectCreate,
                                          CharityProjectDB,
                                          CharityProjectUpdate)
 from app.utils.invest import investing_process
-from fastapi import APIRouter, Depends
-from sqlalchemy.ext.asyncio import AsyncSession
+
 
 router = APIRouter()
 

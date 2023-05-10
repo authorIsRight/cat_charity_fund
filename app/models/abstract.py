@@ -1,7 +1,8 @@
 from datetime import datetime
 
-from app.core.db import Base
 from sqlalchemy import Boolean, Column, DateTime, Integer
+
+from app.core.db import Base
 
 
 class Abstract(Base):
